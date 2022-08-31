@@ -1,9 +1,10 @@
-package hw9;
+package hw10;
 
 import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Map;
-import static org.junit.Assert.*;
+
 import static org.junit.Assert.assertTrue;
 public class HumanTest {
     @Test
@@ -16,10 +17,11 @@ public class HumanTest {
         sl.put(DayOfWeek.WEDNESDAY,"Yoga");
         sl.put(DayOfWeek.THURSDAY,"Reading book");
 
-        Human Samin=new Human("Samin","Alakbarov",1982);
-        Human Lala=new Human("Lala","Alakbarova",2003) ;
+        Human Samin=new Human("Samin","Alakbarov","30/07/1982");
+        Human Lala=new Human("Lala","Alakbarova","19/05/2000") ;
         Family fami=new Family(Lala,Samin);
-        Human Eren=new Human("Eren","Alakbarov",2029,iq=100,sl,fami,cat);
-        assertTrue(Eren.toString().equals("Human{name='Eren', surname='Alakbarov', year=2029, iq=100, schedule={WEDNESDAY=Yoga, TUESDAY=Playing piano, THURSDAY=Reading book, MONDAY=Playing piano}}"));
+        Human Eren=new Human("Eren","Alakbarov","12/13/2021",iq=100,sl,fami,cat);
+        System.out.println(Eren);
+        assertTrue(Eren.toString().equals("Human{name='Eren', surname='Alakbarov', birth date=12/13/2021, iq=100, schedule={MONDAY=Playing piano, WEDNESDAY=Yoga, TUESDAY=Playing piano, THURSDAY=Reading book}}"));
     }
 }

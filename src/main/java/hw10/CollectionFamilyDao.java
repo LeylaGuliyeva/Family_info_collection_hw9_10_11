@@ -1,32 +1,30 @@
-package hw9;
+package hw10;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CollectionFamilyDao implements FamilyDao {
     List<Family> allFam;
 
     public CollectionFamilyDao() {
-        Human Samin = new Human("Samin", "Alakbarov", 1982);
-        Human Lala = new Human("Lala", "Alakbarova", 2003);
-        Human Mukhtar = new Human("Mukhtar", "Asgerli", 1984);
-        Human Loya = new Human("Loya", "Asgerli", 1990);
-        Human Ali = new Human("Ali", "Suleymanzada", 1988);
-        Human Ayda = new Human("Ayda", "Suleymanzada", 1992);
+        Human Samin=new Human("Samin","Alakbarov","30/07/1982");
+        Human Lala=new Human("Lala","Alakbarova","19/05/2000") ;
+        Human Mukhtar = new Human("Mukhtar", "Asgerli", "12/12/1984");
+        Human Loya = new Human("Loya", "Asgerli", "14/03/1990");
+        Human Ali = new Human("Ali", "Suleymanzada", "16/09/1988");
+        Human Ayda = new Human("Ayda", "Suleymanzada", "06/05/1992");
 
-        Human Eren = new Human("Eren", "Alakbarov", 2012);
-        Human Erem = new Human("Erem", "Asgerli", 2010);
-        Human Mikasa = new Human("Mikasa", "Alakbarova", 2004);
-        Human Aurora = new Human("Aurora", "Suleymanzada", 2013);
+        Human Eren=new Human("Eren","Alakbarov","12/10/2021");
+        Human Erem = new Human("Erem", "Asgerli", "11/08/2010");
+        Human Mikasa = new Human("Mikasa", "Alakbarova", "12/04/2004");
+        Human Aurora = new Human("Aurora", "Suleymanzada", "08/09/2013");
         DomesticCat kitten = new DomesticCat("Shine");
 
         Family family1 = new Family(Lala, Samin);
         family1.addChild(Mikasa);
         family1.addChild(Eren);
         Family family2 = new Family(Loya, Mukhtar);
-        family1.addPet(kitten);
+        family2.addPet(kitten);
         family2.addChild(Erem);
         Family family3 = new Family(Ayda, Ali);
         family3.addChild(Aurora);

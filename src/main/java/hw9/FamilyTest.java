@@ -28,8 +28,6 @@ public class FamilyTest {
         x1.add(Amal);
         assertTrue(x1.equals(bestFamily.getChildren()));
     }
-
-
     @Test
     public void toStringTest(){
         Human Dion=new Human("Dion","Bellamy",1994);

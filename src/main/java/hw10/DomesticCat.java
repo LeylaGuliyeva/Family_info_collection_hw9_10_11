@@ -1,4 +1,5 @@
-package hw9;
+package hw10;
+
 import java.util.Set;
 
 public class DomesticCat extends Pet implements Foulable {
