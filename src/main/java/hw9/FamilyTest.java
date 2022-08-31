@@ -35,5 +35,5 @@ public class FamilyTest {
         Human Aurora=new Human("Aurora","Bellamy",2020);
         Family bestFamily=new Family(Esperanza,Dion);
         bestFamily.addChild(Aurora);
-        assertTrue(bestFamily.toString().equals("Family{mother=Human{name='Esperanza', surname='Bellamy', year=1996, iq=null, schedule=null}, father=Human{name='Dion', surname='Bellamy', year=1994, iq=null, schedule=null}, children=[Human{name='Aurora', surname='Bellamy', year=2020, iq=null, schedule=null}], pet=null}"));
+        assertTrue(bestFamily.toString().equals("Family{mother=Human{name='Esperanza', surname='Bellamy', year=1996, iq=null, schedule=null}, father=Human{name='Dion', surname='Bellamy', year=1994, iq=null, schedule=null}, children=[Human{name='Aurora', surname='Bellamy', year=2020, iq=null, schedule=null}], pet=[]}"));
     }}

@@ -20,6 +20,6 @@ public class HumanTest {
         Human Lala=new Human("Lala","Alakbarova",2003) ;
         Family fami=new Family(Lala,Samin);
         Human Eren=new Human("Eren","Alakbarov",2029,iq=100,sl,fami,cat);
-        assertTrue(Eren.toString().equals("Human{name='Eren', surname='Alakbarov', year=2029, iq=100, schedule={WEDNESDAY=Yoga, TUESDAY=Playing piano, THURSDAY=Reading book, MONDAY=Playing piano}}"));
+        assertTrue(Eren.toString().equals("Human{name='Eren', surname='Alakbarov', year=2029, iq=100, schedule={MONDAY=Playing piano, WEDNESDAY=Yoga, TUESDAY=Playing piano, THURSDAY=Reading book}}"));
     }
 }

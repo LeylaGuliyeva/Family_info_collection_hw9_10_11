@@ -26,7 +26,7 @@ public class CollectionFamilyDao implements FamilyDao {
         family1.addChild(Mikasa);
         family1.addChild(Eren);
         Family family2 = new Family(Loya, Mukhtar);
-        family1.addPet(kitten);
+        family2.addPet(kitten);
         family2.addChild(Erem);
         Family family3 = new Family(Ayda, Ali);
         family3.addChild(Aurora);

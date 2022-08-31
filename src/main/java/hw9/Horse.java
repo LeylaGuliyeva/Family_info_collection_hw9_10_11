@@ -1,6 +1,5 @@
 package hw9;
 import java.util.Set;
-
 public class Horse extends Pet {
     public Horse() {
         super();

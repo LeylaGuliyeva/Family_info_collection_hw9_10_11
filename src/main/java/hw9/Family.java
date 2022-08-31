@@ -1,7 +1,6 @@
 package hw9;
 
 import java.util.*;
-
 public class Family {
     private Human mother;
     private Human father;
