@@ -3,14 +3,15 @@ package hw9;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Set;
 
 public class FamilyController {
     FamilyService famSer=new FamilyService();
     public List<Family> getAllFamilies() {
         return famSer.getAllFamilies();
     }
-    public void displayAllFamilies(List<Family> af) {
-        famSer.displayAllFamilies(af);
+    public void displayAllFamilies() {
+        famSer.displayAllFamilies();
     }
     public List<Family> getFamiliesBiggerThan(int x) {
         return famSer.getFamiliesBiggerThan(x);
@@ -30,6 +31,9 @@ public class FamilyController {
     public Family bornChild(Family fam,GenderOfPerson gen){
         return famSer.bornChild(fam,gen);
     }
+    public Family adoptChild(Family fam,Human h){
+        return famSer.adoptChild(fam,h);
+    }
     public void deleteAllChildrenOlderThen(int x){
         famSer.deleteAllChildrenOlderThen(x);
     }
@@ -39,7 +43,7 @@ public class FamilyController {
     public Family getFamilyById(int x){
         return famSer.getFamilyById(x);
     }
-    public List<Pet> getPets(int x){
+    public Set<Pet> getPets(int x){
         return famSer.getPets(x);
     }
     public void addPet(int x,Pet pet){

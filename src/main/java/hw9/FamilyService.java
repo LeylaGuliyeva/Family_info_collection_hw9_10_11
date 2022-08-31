@@ -1,9 +1,6 @@
 package hw9;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
 
 public class FamilyService {
     FamilyDao famDao = new CollectionFamilyDao();
@@ -11,7 +8,7 @@ public class FamilyService {
     public List<Family> getAllFamilies() {
         return famDao.getAllFamilies();
     }
-    public void displayAllFamilies(List<Family> af) {
+    public void displayAllFamilies() {
         System.out.println(famDao.getAllFamilies().toString());
     }
     public List<Family> getFamiliesBiggerThan(int x) {
@@ -60,20 +57,20 @@ public class FamilyService {
         return fam;
     }
     public void deleteAllChildrenOlderThen(int x){
-        famDao.getAllFamilies().forEach(z -> z.getChildren().forEach(a->{
-            if(Calendar.getInstance().get(Calendar.YEAR)-a.getYear()>x){
-                z.deleteChild(a);
-                famDao.saveFamily(z);
-            }}));
-    }
+        for(int i=0;i<famDao.getAllFamilies().size();i++){
+            for(int j=0;j<famDao.getFamilyByIndex(i).getChildren().size();j++){
+                if((Calendar.getInstance().get(Calendar.YEAR)-famDao.getFamilyByIndex(i).getChildren().get(j).getYear())>x){
+                    famDao.getFamilyByIndex(i).deleteChild(famDao.getFamilyByIndex(i).getChildren().get(j));}}
+            famDao.saveFamily(famDao.getFamilyByIndex(i));
+        }}
     public int count(){
         return famDao.getAllFamilies().size();
     }
     public Family getFamilyById(int x){
         return famDao.getFamilyByIndex(x);
     }
-    public List<Pet> getPets(int x){
-        List<Pet> pets=new ArrayList<>(famDao.getFamilyByIndex(x).getPet());
+    public Set<Pet> getPets(int x){
+        Set<Pet> pets=new HashSet<>(famDao.getFamilyByIndex(x).getPet());
         return pets;
     }
     public void addPet(int x,Pet pet){

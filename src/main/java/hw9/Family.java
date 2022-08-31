@@ -1,9 +1,6 @@
 package hw9;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class Family {
     private Human mother;
@@ -56,6 +53,7 @@ public class Family {
         this.mother = mother;
         this.father = father;
         this.children=new ArrayList<Human>();
+        this.pet=new HashSet<Pet>();
     }
 
     public void addChild(Human a) {
